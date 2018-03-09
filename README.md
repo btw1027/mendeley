@@ -6,7 +6,7 @@ For more information on the API, see the [developer portal](http://dev.mendeley.
 
 ## About the application ##
 
-The application is a website that allows you to see the documents in your Mendeley library, together with their annotations.  It also allows you to look up a document by [DOI](http://www.doi.org/).
+The application is a website that allows you to see the groups in your Mendeley library, together with their annotations.  It also allows you to look up a document by [DOI](http://www.doi.org/). Using the pubmed api it will also suggest similar articles using the pubmed word weight algorithm.
 
 It's built with [Flask](http://flask.pocoo.org/) and [Jinja2](http://jinja.pocoo.org/docs/).
 
@@ -18,6 +18,10 @@ It's built with [Flask](http://flask.pocoo.org/) and [Jinja2](http://jinja.pocoo
 4. Run the following command to install dependencies:
 
         pip install -r requirements.txt
+		
+		OR
+		
+		conda env create -f environment.yml
 
 5. Start the server:
 
