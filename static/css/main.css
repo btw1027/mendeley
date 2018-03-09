@@ -1,0 +1,42 @@
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #000 !important;
+}
+
+tr {
+   line-height: 25px;
+   min-height: 25px;
+   height: 25px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+table.center {
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+  }
+
+table.larger {
+    width:100%;
+    margin-left:5%;
+    margin-right:5%;
+  }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="utf-8">
+    <title>Systematic Literature Review</title>
+</head>
+
+<body>
+  <div class = "container">
+    <div class="row">
+      <div class="col-centered">
+        <h1>Suggested articles based on Pubmed word weight algorithm for <b>{{group['name']}}</b> articles</h1>
+        <h2>Documents</h2>
+        <table class="table table-striped">
+              <tr>
+                    <th># </th>
+                    <th>Article Title </th>
+                    <th>ID </th>
+                    <th>Frequency</th>
+              </tr>
+              {% for doc in catalog_lookup %}
+                  {% if loop.index is divisibleby 2 %}
+                      <tr class="active">
+                          <td> {{loop.index}}. </td>
+                          <td>{{doc.title}}</td>
+                          <td><a href={{urls[loop.index0]}} target="_blank">{{suggested_pmids[loop.index0][0]}}</a></td>
+                          <td>{{suggested_pmids[loop.index0][1]}}</td>
+                      </tr>
+                  {% else %}
+                      <tr class="info">
+                          <td> {{loop.index}}. </td>
+                          <td>{{doc.title}}</td>
+                          <td><a href={{urls[loop.index0]}} target="_blank">{{suggested_pmids[loop.index0][0]}}</a></td>
+                          <td>{{suggested_pmids[loop.index0][1]}}</td>
+                      </tr>
+                  {% endif %}
+              {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
