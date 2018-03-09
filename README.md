@@ -31,4 +31,3 @@ It's built with [Flask](http://flask.pocoo.org/) and [Jinja2](http://jinja.pocoo
 
 ## Build status ##
 
-![Travis CI](https://travis-ci.org/Mendeley/mendeley-api-python-example.svg?branch=master)
