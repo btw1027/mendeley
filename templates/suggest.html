@@ -31,10 +31,10 @@
                       </tr>
                   {% else %}
                       <tr class="info">
-                          <td> {{loop.index}}. </td>
-                          <td>{{doc.title}}</td>
-                          <td><a href={{urls[loop.index0]}} target="_blank">{{suggested_pmids[loop.index0][0]}}</a></td>
-                          <td>{{suggested_pmids[loop.index0][1]}}</td>
+                          <td><b> {{loop.index}}. </b></td>
+                          <td><b>{{doc.title}}</b></td>
+                          <td><b><a href={{urls[loop.index0]}} target="_blank">{{suggested_pmids[loop.index0][0]}}</a></b></td>
+                          <td><b>{{suggested_pmids[loop.index0][1]}}</b></td>
                       </tr>
                   {% endif %}
               {% endfor %}

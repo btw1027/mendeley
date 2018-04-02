@@ -8,7 +8,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: red;
+    color: light-green;
     text-align: center;
     text-decoration: underline;
 }

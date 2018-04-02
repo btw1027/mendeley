@@ -13,23 +13,40 @@
     <h1>{{doc['title']}}</h1>
 
     <h2>Authors</h2>
+    {% if doc.authors %}
     <ul>
         {% for author in doc['authors'] %}
             <li>{{author['first_name']}} {{author['last_name']}}</li>
         {% endfor %}
     </ul>
+    {% endif %}
 
     <h2>Source</h2>
-    {{doc['source']}}
+    {% if doc.source %}
+        {{doc['source']}}
+    {% endif %}
 
     <h2>Year</h2>
-    {{doc['year']}}
+    {% if doc.year %}
+        {{doc['year']}}
+    {% endif %}
 
     <h2>PMID</h2>
-    {{doc['identifiers']['pmid']}}
+    {% if doc.identifiers.pmid %}
+        {{doc['identifiers']['pmid']}}
+    {% endif %}
 
     <h2>Abstract</h2>
-    {{doc['abstract']}}
+    {% if doc.abstract %}
+        {{doc['abstract']}}
+    {% endif %}
+
+    <h2> Keywords </h2>
+    {% if doc.keywords %}
+        {% for keyword in doc['keywords'] %}
+            {{keyword}},
+        {% endfor %}
+    {% endif %}
   </div>
 </body>
 </html>
