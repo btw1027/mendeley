@@ -29,5 +29,4 @@ It's built with [Flask](http://flask.pocoo.org/) and [Jinja2](http://jinja.pocoo
 
 6. Go to http://127.0.0.1:5000 in your browser.
 
-## Build status ##
 
